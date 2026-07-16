@@ -1,16 +1,32 @@
-# React + Vite
+# Repzy Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Welcome to the Repzy Website repository! This is a modern, high-performance landing page built with React, Vite, and Supabase.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Install Dependencies
+Make sure you have Node.js installed, then run:
+```bash
+npm install
+```
 
-## React Compiler
+### 2. Environment Variables
+This project uses Supabase for the waitlist backend. You must create a `.env` file in the root directory before running the app. 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Create a file named `.env` and add your keys:
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-## Expanding the Oxlint configuration
+### 3. Run the Development Server
+Start the local Vite development server:
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 4. Build for Production
+To create a production-ready bundle:
+```bash
+npm run build
+```
