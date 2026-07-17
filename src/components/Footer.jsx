@@ -13,7 +13,7 @@ const Footer = ({ onNavigate }) => {
               style={{ display: 'flex', alignItems: 'center', gap: '0', marginLeft: '-15px' }}
               onClick={(e) => { e.preventDefault(); onNavigate('home'); }}
             >
-              <img src="/logo.png" alt="Repzy Logo" style={{ height: '80px', objectFit: 'contain', margin: '-20px 0' }} />
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Repzy Logo" style={{ height: '80px', objectFit: 'contain', margin: '-20px 0' }} />
               <div style={{ marginLeft: '-16px' }}>REPZY</div>
             </a>
             <p className="download-text">Download Repzy</p>

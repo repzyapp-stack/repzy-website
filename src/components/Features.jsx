@@ -4,22 +4,22 @@ const featureData = [
   {
     title: "Hands-Free Rep Counting",
     description: "Prop up your phone and lift. Repzy's AI counts every rep automatically — no buttons needed.",
-    image: "/feature-1.png"
+    image: `${import.meta.env.BASE_URL}feature-1.png`
   },
   {
     title: "AI Form Analysis",
     description: "Get live feedback on your tempo and range of motion as you lift, rep by rep.",
-    image: "/feature-2.jpg"
+    image: `${import.meta.env.BASE_URL}feature-2.jpg`
   },
   {
     title: "Progression Tracking",
     description: "Track your PRs, volume, and intensity over time with beautiful progress charts.",
-    image: "/feature-3.jpg"
+    image: `${import.meta.env.BASE_URL}feature-3.jpg`
   },
   {
     title: "Complete Fitness Toolkit",
     description: "Macro & BMR calculators, stopwatch, body measurements, reminders, and more.",
-    image: "/feature-1.png"
+    image: `${import.meta.env.BASE_URL}feature-1.png`
   }
 ];
 
@@ -39,7 +39,7 @@ const Features = () => {
         <div className="interactive-features-container animate-fade-in-up desktop-features">
           <div className="interactive-phone-col">
             <div className="phone-mockup image-based-mockup" style={{ position: 'relative' }}>
-              <img src="/iphone-frame.png" className="mockup-frame" alt="Phone Frame" />
+              <img src={`${import.meta.env.BASE_URL}iphone-frame.png`} className="mockup-frame" alt="Phone Frame" />
               <img src={featureData[activeIndex].image} className="mockup-screen" alt="Feature preview" />
             </div>
             <div className="pagination-dots">
@@ -64,7 +64,7 @@ const Features = () => {
             <div key={index} className="mobile-feature-card">
               <div className="mobile-feature-mockup">
                 <div className="phone-mockup image-based-mockup">
-                  <img src="/iphone-frame.png" className="mockup-frame" alt="Phone Frame" />
+                  <img src={`${import.meta.env.BASE_URL}iphone-frame.png`} className="mockup-frame" alt="Phone Frame" />
                   <img src={feat.image} className="mockup-screen" alt={feat.title} />
                 </div>
               </div>
