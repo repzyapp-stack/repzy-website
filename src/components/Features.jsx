@@ -2,18 +2,43 @@ import React, { useState } from 'react';
 
 const featureData = [
   {
-    title: "Hands-Free Rep Counting",
-    description: "Prop up your phone and lift. Repzy's AI counts every rep automatically — no buttons needed.",
+    title: "Everything you need, in one place",
+    points: [
+      "Log Workouts: Modern, minimalist design for effortless workout logging",
+      "Warm-up, drop, and failure set tracking",
+      "Detailed exercise analytics for every movement",
+      "PR and goal tracking with progression graphs over time",
+      "Video instructions for every exercise",
+      "Automatic rest timers",
+      "Exercise notes and complete workout history"
+    ],
     image: `${import.meta.env.BASE_URL}feature-1.png`
   },
   {
     title: "AI Form Analysis",
-    description: "Get live feedback on your tempo and range of motion as you lift, rep by rep.",
+    points: [
+      "Recovery data to help you avoid overtraining and prevent slow progress.",
+      "AI-powered overall fitness score to understand your performance at a glance.",
+      "Strength progression and consistency tracking to stay motivated and know when to push harder.",
+      "PR tracking and progressive overload insights to keep improving every workout.",
+      "Body metrics and growth tracking to monitor your transformation over time.",
+      "Macro calculator to personalize your nutrition goals.",
+      "RMR calculator to understand your daily calorie needs.",
+      "Workout reminders to stay consistent with your training."
+    ],
     image: `${import.meta.env.BASE_URL}feature-2.jpg`
   },
   {
-    title: "Progression Tracking",
-    description: "Track your PRs, volume, and intensity over time with beautiful progress charts.",
+    title: "Join the Community",
+    description: "Become part of Repzy’s ever-growing Discord community, where fitness enthusiasts share knowledge, support each other, and stay motivated on their journey to reach their fitness goals.",
+    points: [
+      "Get fitness advice from other lifters",
+      "Share your progress and celebrate personal records with the community.",
+      "Ask questions about workouts, nutrition, recovery, and consistency.",
+      "Stay motivated with challenges, discussions, and daily support.",
+      "Learn from others who are working toward similar fitness goals.",
+      "Be part of a growing movement focused on smarter training and long-term progress."
+    ],
     image: `${import.meta.env.BASE_URL}feature-3.jpg`
   },
   {
@@ -70,7 +95,21 @@ const Features = () => {
               </div>
               <div className="mobile-feature-text">
                 <h3>{feat.title}</h3>
-                <p>{feat.description}</p>
+                <p>{feat.mobileDescription || feat.description}</p>
+                {feat.points && (
+                  <div className="feature-points-list">
+                    {feat.points.map((point, ptIdx) => (
+                      <div key={ptIdx} className="feature-point-item">
+                        <div className="feature-point-icon">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                        </div>
+                        <span className="feature-point-text">{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}

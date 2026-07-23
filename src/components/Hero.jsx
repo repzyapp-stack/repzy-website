@@ -6,13 +6,13 @@ const Hero = ({ onNavigate }) => {
       <div className="container">
         <div className="hero-content">
           <h1 className="animate-fade-in-up delay-100">
-            Meet Repzy <br/>
-            <span style={{ fontWeight: 400 }}>Your AI Fitness Coach</span>
+            Train Smarter. <br/>
+            Track Your Progress. <br/>
+            Grow Beyond Limits.
           </h1>
           
           <p className="hero-description animate-fade-in-up delay-200">
-            Repzy is the ultimate AI-powered app for your fitness journey.
-            Automatically track your reps, perfect your form, and achieve your goals faster than ever.
+            Repzy is the #1 AI-powered workout tracker that helps you track your strength progression, exercise performance, PRs, recovery, progressive overload, and more key fitness metrics - so every workout session moves you closer to your goals.
           </p>
           
           {/* Desktop Join Waitlist Button */}

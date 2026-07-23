@@ -66,7 +66,7 @@ ul {
 h1 {
   font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.25;
   letter-spacing: -0.03em;
 }
 
@@ -204,9 +204,33 @@ p {
 @media (max-width: 992px) {
   .hero-section .container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
-    gap: 4rem;
+    gap: 2rem;
+  }
+  .hero-content {
+    display: contents;
+  }
+  .hero-content h1 {
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+  .hero-image-wrapper {
+    order: 2;
+  }
+  .hero-content .hero-description {
+    order: 3;
+    margin: 1.5rem auto 0;
+  }
+  .desktop-hero-waitlist {
+    display: block !important;
+    order: 4;
+    margin: 2rem auto 0;
+    width: 100%;
+    max-width: 320px;
+  }
+  .mobile-waitlist-cta {
+    display: none !important;
   }
 }
 
@@ -876,40 +900,35 @@ header {
   }
   .mobile-features-scroll {
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    gap: 1rem;
-    padding-bottom: 1rem;
-    margin: 0 -1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  .mobile-features-scroll::-webkit-scrollbar {
-    display: none;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 2rem;
   }
   .mobile-feature-card {
-    flex: 0 0 78vw;
-    scroll-snap-align: center;
-    background: var(--color-glass-bg);
-    border: 1px solid var(--color-glass-border);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    box-shadow: var(--shadow-sm);
+    align-items: flex-start;
+    gap: 1.5rem;
+    box-shadow: none;
   }
   .mobile-feature-mockup {
     width: 100%;
     display: flex;
     justify-content: center;
+    background: #F4F5F7;
+    border-radius: 24px 24px 0 0;
+    padding-top: 3rem;
+    overflow: hidden;
   }
   .mobile-feature-mockup .image-based-mockup {
-    width: 180px !important;
+    width: 250px !important;
+    margin-bottom: -160px !important;
+    align-items: flex-start !important;
     pointer-events: none;
     user-select: none;
     -webkit-user-select: none;
@@ -920,22 +939,53 @@ header {
     -webkit-user-drag: none;
   }
   .mobile-feature-mockup .image-based-mockup .mockup-screen {
-    border-radius: 22px; /* Scaled down from 40px to match 180px frame size */
-    top: calc(1.5% - 2px); /* Pushed up 5px from default calc(1.5% + 3px) */
+    border-radius: 31px;
+    top: calc(1.5% - 1px);
+    object-position: center top;
   }
   .mobile-feature-text {
-    text-align: center;
+    text-align: left;
+    width: 100%;
   }
   .mobile-feature-text h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
     color: var(--color-text-main);
+    letter-spacing: -0.02em;
   }
   .mobile-feature-text p {
-    font-size: 0.875rem;
+    font-size: 0.95rem;
     color: var(--color-text-muted);
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .feature-points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .feature-point-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .feature-point-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-point-text {
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+    font-weight: 500;
   }
 }
 
@@ -1150,8 +1200,8 @@ header {
   
   /* Typography */
   h1 {
-    font-size: 2.75rem;
-    line-height: 1.1;
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    line-height: 1.35;
   }
   h2 {
     font-size: 2rem;
@@ -1165,15 +1215,6 @@ header {
     margin-top: 1.5rem;
     height: auto !important;
     flex-direction: column !important;
-  }
-  .desktop-hero-waitlist {
-    display: none !important;
-  }
-  .mobile-waitlist-cta {
-    display: block !important;
-    margin: 2.5rem auto 0 !important;
-    width: 100%;
-    max-width: 320px;
   }
   .waitlist-card {
     padding: 2.5rem 1.5rem;
