@@ -16,15 +16,6 @@ const Footer = ({ onNavigate }) => {
               <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Repzy Logo" style={{ height: '80px', objectFit: 'contain', margin: '-20px 0' }} />
               <div style={{ marginLeft: '-16px' }}>REPZY</div>
             </a>
-            <p className="download-text">Download Repzy</p>
-            <div className="footer-badges">
-              <a href="#">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" />
-              </a>
-              <a href="#">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
-              </a>
-            </div>
           </div>
           
           <div className="footer-col links-col">
