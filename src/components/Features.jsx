@@ -91,7 +91,7 @@ const Features = () => {
                   <img src={feat.image} className="mockup-screen" alt={feat.title} />
                 </div>
               </div>
-              
+
               <div className="feature-text">
                 <h3 style={{ whiteSpace: 'nowrap' }}>{feat.title}</h3>
                 <p>{feat.mobileDescription || feat.description}</p>

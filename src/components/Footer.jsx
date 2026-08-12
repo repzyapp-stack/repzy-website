@@ -30,8 +30,8 @@ const Footer = ({ onNavigate }) => {
           <div className="footer-col links-col">
             <h4>Legal</h4>
             <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of use</a></li>
+              <li><a href="#privacy" onClick={(e) => { e.preventDefault(); onNavigate('privacy'); }}>Privacy Policy</a></li>
+              <li><a href="#terms" onClick={(e) => { e.preventDefault(); onNavigate('terms'); }}>Terms of Use</a></li>
             </ul>
           </div>
           

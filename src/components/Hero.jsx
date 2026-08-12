@@ -20,7 +20,7 @@ const Hero = ({ onNavigate }) => {
             <button 
               className="btn btn-primary"
               onClick={() => onNavigate('waitlist')}
-              style={{ padding: '12px 32px', fontSize: '1.05rem' }}
+              style={{ padding: '15px 42px', fontSize: '1.15rem', fontWeight: '700', position: 'relative', top: '-10px' }}
             >
               Join Waitlist
             </button>
