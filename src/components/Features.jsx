@@ -13,7 +13,7 @@ const featureData = [
       "Automatic rest timers",
       "Exercise notes and complete workout history"
     ],
-    image: `${import.meta.env.BASE_URL}feature-1.png`
+    image: `${import.meta.env.BASE_URL}APPSCREENSHOTS/Neon/GREEN_EX_detailsON.PNG`
   },
   {
     title: "Clear & Actionable Insights",
@@ -28,7 +28,7 @@ const featureData = [
       "RMR calculator to understand your daily calorie needs.",
       "Workout reminders to stay consistent with your training."
     ],
-    image: `${import.meta.env.BASE_URL}feature-2.jpg`
+    image: `${import.meta.env.BASE_URL}APPSCREENSHOTS/Neon/GREEN_Grid.PNG`
   },
   {
     title: "Join the Community",
