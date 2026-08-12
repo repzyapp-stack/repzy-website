@@ -30,11 +30,11 @@ const Hero = ({ onNavigate }) => {
         <div className="hero-image-wrapper overlapping-phones animate-fade-in-up delay-300">
           <div className="phone-mockup image-based-mockup phone-back">
             <img src={`${import.meta.env.BASE_URL}iphone-frame.png`} className="mockup-frame" alt="Phone Frame" />
-            <img src={`${import.meta.env.BASE_URL}hero-mockup.png`} className="mockup-screen" alt="App Screen" />
+            <img src={`${import.meta.env.BASE_URL}screen-back.png`} className="mockup-screen" alt="App Screen" />
           </div>
           <div className="phone-mockup image-based-mockup phone-front">
             <img src={`${import.meta.env.BASE_URL}iphone-frame.png`} className="mockup-frame" alt="Phone Frame" />
-            <img src={`${import.meta.env.BASE_URL}hero-mockup.png`} className="mockup-screen" alt="App Screen" />
+            <img src={`${import.meta.env.BASE_URL}screen-front.png`} className="mockup-screen" alt="App Screen" />
           </div>
           
           {/* Mobile Join Waitlist Button */}
