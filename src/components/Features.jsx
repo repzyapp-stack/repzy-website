@@ -28,7 +28,7 @@ const featureData = [
       "RMR calculator to understand your daily calorie needs.",
       "Workout reminders to stay consistent with your training."
     ],
-    image: `${import.meta.env.BASE_URL}APPSCREENSHOTS/Neon/GREEN_Grid.PNG`
+    image: `${import.meta.env.BASE_URL}APPSCREENSHOTS/Neon/PERFORMANCE_GREEN.PNG`
   },
   {
     title: "Join the Community",
