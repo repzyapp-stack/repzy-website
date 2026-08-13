@@ -13,7 +13,7 @@ const featureData = [
       "Automatic rest timers",
       "Exercise notes and complete workout history"
     ],
-    image: `${import.meta.env.BASE_URL}APPSCREENSHOTS/Neon/GREEN_EX_detailsON.PNG`
+    image: `${import.meta.env.BASE_URL}APPSCREENSHOTS/Neon/GREEN_EX_details.PNG`
   },
   {
     title: "Clear & Actionable Insights",
