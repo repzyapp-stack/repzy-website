@@ -765,10 +765,10 @@ header {
 }
 
 .logo {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--color-text-main);
-  letter-spacing: -0.05em;
+  letter-spacing: 0.45px;
 }
 
 .logo span {
