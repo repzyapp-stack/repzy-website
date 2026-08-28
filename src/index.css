@@ -1207,15 +1207,27 @@ header {
     padding: 2.5rem 1.5rem;
   }
   .overlapping-phones {
-    height: 335px !important;
-    align-items: center;
+    height: auto !important;
+    min-height: 400px;
+    align-items: flex-start;
     margin: 0;
     display: flex;
     justify-content: center;
     overflow: visible;
-    padding: 0;
-    transform: translateY(65px) scale(0.57) !important;
-    transform-origin: top center !important;
+    padding: 1rem 0 0 0;
+    transform: none !important;
+  }
+  
+  .overlapping-phones .image-based-mockup {
+    width: clamp(220px, 55vw, 320px) !important;
+  }
+  
+  .overlapping-phones .phone-front {
+    transform: rotate(-5deg) translateX(-22%) translateY(10px) !important;
+  }
+  
+  .overlapping-phones .phone-back {
+    transform: rotate(7deg) translateX(22%) translateY(-10px) scale(0.95) !important;
   }
   .hero-actions {
     justify-content: center;
