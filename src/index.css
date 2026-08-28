@@ -1207,14 +1207,14 @@ header {
     padding: 2.5rem 1.5rem;
   }
   .overlapping-phones {
-    height: 360px !important;
+    height: 335px !important;
     align-items: center;
     margin: 0;
     display: flex;
     justify-content: center;
     overflow: visible;
     padding: 0;
-    transform: translateY(60px) scale(0.60) !important;
+    transform: translateY(65px) scale(0.57) !important;
     transform-origin: top center !important;
   }
   .hero-actions {
