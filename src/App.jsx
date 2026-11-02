@@ -5,6 +5,7 @@ import Features from './components/Features';
 import WaitlistPage from './components/WaitlistPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TermsOfServicePage from './components/TermsOfServicePage';
+import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import './index.css'; // Make sure this is loaded if not already in main.jsx
 
@@ -31,6 +32,8 @@ function App() {
           <PrivacyPolicyPage onBack={() => navigateTo('home')} />
         ) : currentPage === 'terms' ? (
           <TermsOfServicePage onBack={() => navigateTo('home')} />
+        ) : currentPage === 'contact' ? (
+          <ContactPage onBack={() => navigateTo('home')} />
         ) : (
           <WaitlistPage onBack={() => navigateTo('home')} />
         )}

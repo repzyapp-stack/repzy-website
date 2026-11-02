@@ -29,7 +29,7 @@ const Footer = ({ onNavigate }) => {
           <div className="footer-col links-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#contact" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}>Contact</a></li>
             </ul>
           </div>
 
