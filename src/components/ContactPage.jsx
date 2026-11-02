@@ -42,73 +42,78 @@ const ContactPage = ({ onBack }) => {
           {/* Email Support Card */}
           <div className="contact-card glass-panel">
             <div className="contact-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
             </div>
             <h3>Email Support</h3>
-            <p>Direct support for account questions, app issues, feedback, or business inquiries.</p>
-            <div className="contact-email-badge">
-              <a href="mailto:repzyapp@gmail.com" className="contact-email-link">
+            <p>Questions, feedback, bug reports, or business inquiries.</p>
+            
+            <div className="contact-action-row">
+              <a href="mailto:repzyapp@gmail.com" className="btn btn-primary contact-email-btn">
                 repzyapp@gmail.com
               </a>
               <button 
                 type="button" 
                 onClick={handleCopyEmail} 
-                className="contact-copy-btn" 
-                title="Copy to clipboard"
+                className="contact-copy-icon-btn" 
+                title="Copy email to clipboard"
               >
-                {copied ? 'Copied!' : 'Copy'}
+                {copied ? (
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                ) : (
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                )}
+                <span>{copied ? 'Copied' : 'Copy'}</span>
               </button>
             </div>
-            <a href="mailto:repzyapp@gmail.com" className="btn btn-primary contact-action-btn">
-              Send Email
-            </a>
-            <span className="contact-subtext">Typical response time: within 24-48 hours</span>
+            <span className="contact-subtext">Replies typically within 24–48 hours</span>
           </div>
 
           {/* Social Channels Card */}
           <div className="contact-card glass-panel">
             <div className="contact-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M8 12a4 4 0 0 0 8 0"></path>
-                <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </div>
             <h3>Social & Community</h3>
-            <p>Follow our journey, get workout tips, and message us directly on our official channels.</p>
+            <p>Follow along for updates, workout tips, or direct message us.</p>
             
-            <div className="contact-social-list">
+            <div className="contact-action-row">
               <a 
                 href="https://www.instagram.com/repzy.fit/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="contact-social-item"
+                className="btn btn-secondary contact-social-pill"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
-                <span>Instagram: @repzy.fit</span>
+                <span>Instagram</span>
               </a>
 
               <a 
                 href="https://www.tiktok.com/@repzy.fit?_r=1&_t=ZN-9B36EX4r04c" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="contact-social-item"
+                className="btn btn-secondary contact-social-pill"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
                 </svg>
-                <span>TikTok: @repzy.fit</span>
+                <span>TikTok</span>
               </a>
             </div>
-            <span className="contact-subtext">Direct messages open for feedback & community</span>
+            <span className="contact-subtext">@repzy.fit · DMs open</span>
           </div>
         </div>
 
