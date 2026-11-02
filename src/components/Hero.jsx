@@ -27,15 +27,19 @@ const Hero = ({ onNavigate }) => {
           </div>
         </div>
         
-        <div className="hero-image-wrapper overlapping-phones animate-fade-in-up delay-300">
-          <div className="phone-mockup image-based-mockup phone-back">
-            <img src={`${import.meta.env.BASE_URL}iphone-frame.png`} className="mockup-frame" alt="Phone Frame" />
-            <img src={`${import.meta.env.BASE_URL}screen-back.png`} className="mockup-screen" alt="App Screen" />
-          </div>
-          <div className="phone-mockup image-based-mockup phone-front">
-            <img src={`${import.meta.env.BASE_URL}iphone-frame.png`} className="mockup-frame" alt="Phone Frame" />
-            <img src={`${import.meta.env.BASE_URL}screen-front.png`} className="mockup-screen" alt="App Screen" />
-          </div>
+        <div className="hero-image-wrapper animate-fade-in-up delay-300">
+          <img 
+            src={`${import.meta.env.BASE_URL}hero-mockup.png`} 
+            alt="Repzy App" 
+            className="single-hero-mockup-img"
+            style={{ 
+              width: '100%', 
+              maxWidth: '900px', 
+              height: 'auto', 
+              display: 'block', 
+              margin: '0 auto'
+            }} 
+          />
           
           {/* Mobile Join Waitlist Button */}
           <button 

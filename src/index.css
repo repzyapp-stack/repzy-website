@@ -220,23 +220,28 @@ p {
 
 .hero-section .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 10rem);
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: clamp(2rem, 5vw, 6rem);
   align-items: center;
-  transform: translateX(-75px);
 }
 
 .hero-content {
-  transform: translateX(-25px);
+  /* Native grid handles placement */
+}
+
+/* ── Single Hero Mockup Scaling ── */
+.single-hero-mockup-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  transform: scale(2.3) translateY(10px) translateX(2px);
 }
 
 @media (max-width: 1350px) {
   .hero-section .container {
     transform: translateX(0);
-  }
-  .overlapping-phones {
-    transform: scale(clamp(0.65, calc(100vw / 1450), 0.95));
-    transform-origin: center;
   }
 }
 
@@ -263,7 +268,7 @@ p {
   }
   .hero-content .hero-description {
     order: 3;
-    margin: 2.75rem auto 0;
+    margin: 4rem auto 0;
   }
   .desktop-hero-waitlist {
     display: block !important;
@@ -538,28 +543,7 @@ p {
 }
 
 /* Overlapping Phones Layout (Desktop) */
-.overlapping-phones {
-  position: relative;
-  height: 600px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1000px;
-  transform: scale(0.75);
-}
-.overlapping-phones .image-based-mockup.phone-front {
-  position: absolute !important;
-  transform: rotate(-6deg) translateX(-100px) translateY(10px);
-  z-index: 2;
-  filter: drop-shadow(-10px 20px 40px rgba(0,0,0,0.15));
-}
-.overlapping-phones .image-based-mockup.phone-back {
-  position: absolute !important;
-  transform: rotate(8deg) translateX(120px) translateY(-10px) scale(0.95);
-  z-index: 1;
-  filter: drop-shadow(10px 15px 30px rgba(0,0,0,0.1));
-}
+
 
 /* Scanner Screen (Left) */
 .scanner-screen {
@@ -1181,6 +1165,20 @@ header {
 /* --- Mobile Optimization Overrides --- */
 @media (max-width: 768px) {
   /* Header */
+  header {
+    padding: 0.25rem 0 !important;
+  }
+  .logo {
+    font-size: 1.5rem !important;
+  }
+  .logo img {
+    height: 60px !important;
+    margin: -15px 0 !important;
+  }
+  .logo div {
+    margin-left: -12px !important; /* 4px further away than desktop's -16px */
+    margin-top: 4px !important; /* Move text 4px down */
+  }
   .nav-links {
     display: none;
   }
@@ -1206,29 +1204,7 @@ header {
   .waitlist-card {
     padding: 2.5rem 1.5rem;
   }
-  .overlapping-phones {
-    height: auto !important;
-    min-height: 400px;
-    align-items: flex-start;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    overflow: visible;
-    padding: 1rem 0 0 0;
-    transform: none !important;
-  }
-  
-  .overlapping-phones .image-based-mockup {
-    width: clamp(220px, 55vw, 320px) !important;
-  }
-  
-  .overlapping-phones .phone-front {
-    transform: rotate(-5deg) translateX(-22%) translateY(10px) !important;
-  }
-  
-  .overlapping-phones .phone-back {
-    transform: rotate(7deg) translateX(22%) translateY(-10px) scale(0.95) !important;
-  }
+
   .hero-actions {
     justify-content: center;
   }
@@ -1419,5 +1395,17 @@ header {
   }
   .legal-content h1 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-hero-mockup-img {
+    max-width: 100%;
+    transform: scale(1.5);
+    transform-origin: top center;
+    margin-top: 30px; /* Moved down by 20px */
+    margin-bottom: 240px; /* Increased to push subtext further down */
+    position: relative;
+    z-index: 1; /* Keep it below the z-index 100 header */
   }
 }

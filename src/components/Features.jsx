@@ -6,7 +6,7 @@ const featureData = [
     description: "Effortless set tracking, automatic rest timers, and built-in exercise guides to keep your gym flow uninterrupted.",
     points: [
       "Log Workouts: Modern, minimalist design for effortless workout logging",
-      "Warm-up, drop, and failure set tracking",
+      "Seamless in-app and lockscreen workout logging",
       "Detailed exercise analytics for every movement",
       "PR and goal tracking with progression graphs over time",
       "Video instructions for every exercise",
