@@ -53,6 +53,9 @@ const TermsOfServicePage = ({ onBack }) => {
         <p>
           <strong>4.3 Cancellation and Refunds.</strong> You may manage or cancel your Premium Subscription at any time through your Apple ID or Google Play account settings. Cancellations will take effect at the end of the current billing cycle. ALL PURCHASES ARE FINAL AND NON-REFUNDABLE, except as required by applicable law or the policies of the respective app store.
         </p>
+        <p>
+          <strong>4.4 Operational Lifecycle, Lifetime Access, and Service Discontinuation.</strong> Any purchase designated as a recurring subscription, "Lifetime," or "Perpetual" access grants you a non-transferable, revocable license to use the Service solely for as long as it remains actively operated, maintained, and commercially offered to the public by REPZY. The term "Lifetime" refers exclusively to the operational lifecycle of the Application and Service—not the natural lifespan of the user or an indefinite period. If the Application or Service is permanently discontinued, shut down, delisted, or retired for any reason (including, without limitation, technical obsolescence, corporate changes, or operational decisions), all subscription and lifetime access entitlements will immediately and automatically terminate without further notice, and REPZY will have no obligation to provide ongoing service, maintenance, data hosting, or refunds, except where strictly required by applicable law or the policies of the respective app store.
+        </p>
 
         <h2>5. THIRD-PARTY INTEGRATIONS (HEALTH DATA)</h2>
         <p>
