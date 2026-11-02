@@ -112,21 +112,6 @@ const ContactPage = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Quick FAQ / Info Box */}
-        <div className="contact-faq glass-panel">
-          <h3>Helpful Quick Notes</h3>
-          <div className="faq-items">
-            <div className="faq-item">
-              <strong>Subscriptions & Billing</strong>
-              <p>Purchases made through iOS are processed and managed securely through your Apple ID settings. You can manage or cancel anytime via Settings &gt; [Your Name] &gt; Subscriptions on your iPhone.</p>
-            </div>
-            <div className="faq-item">
-              <strong>Privacy & Data Deletion</strong>
-              <p>You can delete your account and all associated workout data directly within the app (Settings &gt; Delete Account) or by emailing us with your registered account address.</p>
-            </div>
-          </div>
-        </div>
-
         <div style={{ textAlign: 'center', marginTop: '3rem' }}>
           <button onClick={onBack} className="btn btn-secondary">
             Return to Home
@@ -138,3 +123,4 @@ const ContactPage = ({ onBack }) => {
 };
 
 export default ContactPage;
+

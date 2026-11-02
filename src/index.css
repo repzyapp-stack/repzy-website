@@ -1557,38 +1557,6 @@ header {
   transform: translateY(-2px);
 }
 
-.contact-faq {
-  padding: 2rem 2.5rem;
-  margin-top: 1rem;
-  border-radius: var(--radius-lg);
-}
-
-.contact-faq h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-  color: var(--color-text-main);
-}
-
-.faq-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.faq-item strong {
-  display: block;
-  font-size: 0.95rem;
-  color: var(--color-text-main);
-  margin-bottom: 0.35rem;
-}
-
-.faq-item p {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: var(--color-text-muted);
-}
-
 @media (max-width: 768px) {
   .contact-content-wrapper {
     padding: 2.5rem 1.25rem;
